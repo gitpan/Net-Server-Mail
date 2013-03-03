@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use base 'Net::Server::Mail';
 
-our $VERSION = "0.17";
+our $VERSION = "0.18";
 
 =pod
 
@@ -751,13 +751,13 @@ Olivier Poitrey E<lt>rs@rhapsodyk.netE<gt>
 
 Available on CPAN.
 
-anonymous SVN repository:
+anonymous Git repository:
 
-svn co https://emailproject.perl.org/svn/Net-Server-Mail
+git clone git://github.com/rs/net-server-mail.git
 
-SVN repository on the web:
+Git repository on the web:
 
-http://emailproject.perl.org/svn/Net-Server-Mail/
+L<https://github.com/rs/net-server-mail>
 
 =head1 BUGS
 
@@ -782,7 +782,11 @@ USA
 
 =head1 COPYRIGHT
 
+<<<<<<< HEAD:lib/Net/Server/Mail/SMTP.pm
+Copyright (C) 2002 - Olivier Poitrey
+=======
 Copyright (C) 2002 - Olivier Poitrey, 2007 - Xavier Guimard
+>>>>>>> new/master:lib/Net/Server/Mail/SMTP.pm
 
 =cut
 

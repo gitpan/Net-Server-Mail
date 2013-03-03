@@ -1,5 +1,9 @@
 Revision history for Perl extension Net::Server::Mail.
 
+0.19  Sun Feb 3 11:52:54 2013
+	- Add STARTTLS extension
+	- Fix spelling errors
+
 0.18  Sun May 13 12:04:25 2012
 	- Close bug #75360 : Net::Server::Mail incorrectly processes incomplete
 	  lines during SMTP session
@@ -23,6 +27,13 @@ Revision history for Perl extension Net::Server::Mail.
 0.14  Mon Apr 2 7:15:45 2007
 	- New maintener: Xavier Guimard <guimard@cpan.org>
 	- Closes: #18955, #24038, #24280 / rt.cpan.org
+
+2006-01-10  Olivier Poitrey  <rs@rhapsodyk.net>
+
+	* Release 0.14
+
+	* Removed confusing "Service ready" substring from EHLO response
+          (reported by Stas Bekman)
 
 2005-02-02  Olivier Poitrey  <rs@rhapsodyk.net>
 
