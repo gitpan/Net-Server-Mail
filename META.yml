@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Net-Server-Mail
-version:            0.19
+version:            0.19_01
 abstract:           Class to easily create a mail server
 author:
     - Xavier Guimard <x.guimard@free.fr>
