@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Net-Server-Mail
-version:            0.19_02
+version:            0.20
 abstract:           Class to easily create a mail server
 author:
     - Xavier Guimard <x.guimard@free.fr>
@@ -21,3 +21,5 @@ generated_by:       ExtUtils::MakeMaker version 6.57_05
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
+recommends:
+    IO::Socket::SSL:  1.831

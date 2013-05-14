@@ -20,7 +20,7 @@ use IO::Socket::SSL 1.831;
 use Net::Server::Mail::ESMTP::Extension;
 our @ISA = qw(Net::Server::Mail::ESMTP::Extension);
 
-our $VERSION = 0.19_01;
+our $VERSION = 0.20;
 
 use constant {
     REPLY_READY_TO_START => 220,
@@ -87,7 +87,7 @@ sub starttls {
 
 =head1 NAME
 
-Net::Server::Mail::ESMTP::STARTTLS - A module to suport the STARTTLS command in Net::Server::Mail::ESMTP
+Net::Server::Mail::ESMTP::STARTTLS - A module to support the STARTTLS command in Net::Server::Mail::ESMTP
 
 =head1 SYNOPSIS
 
