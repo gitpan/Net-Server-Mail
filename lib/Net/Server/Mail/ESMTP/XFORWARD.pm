@@ -2,14 +2,16 @@ package Net::Server::Mail::ESMTP::XFORWARD;
 
 use 5.006;
 use strict;
+use Scalar::Util qw(weaken);
 
-our $VERSION = '0.06';
+our $VERSION = '0.21';
 
 use base qw(Net::Server::Mail::ESMTP::Extension);
 
 sub init {
     my ( $self, $parent ) = @_;
     $self->{parent} = $parent;
+    weaken( $self->{parent} );
     return $self;
 }
 
@@ -38,20 +40,20 @@ sub xforward {
     }
     else {
         $self->{"xforward"}->{ lc($_) } = $h{$_} foreach ( keys %h );
-        $self->make_event (
-                name => 'XFORWARD',
-                arguments => [$self->{"xforward"}],
-                on_success => sub
-                {
+        $self->make_event(
+            name       => 'XFORWARD',
+            arguments  => [ $self->{"xforward"} ],
+            on_success => sub {
+
                 #my $buffer = $self->step_forward_path();
                 #$buffer = [] unless ref $buffer eq 'ARRAY';
                 #push(@$buffer, $address);
                 #$self->step_forward_path($buffer);
                 #$self->step_maildata_path(1);
-                },
-                success_reply => [250, "OK"],
-                failure_reply => [550, 'Failure'],
-                );
+            },
+            success_reply => [ 250, "OK" ],
+            failure_reply => [ 550, 'Failure' ],
+        );
     }
     return;
 }
