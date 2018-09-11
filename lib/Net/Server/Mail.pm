@@ -456,6 +456,8 @@ sub process {
             }
         }
         if ( ( not defined $rv ) or ( $rv == 0 ) ) {
+	    # socket temporary unavailable - try to read again
+	    next if not defined $rv and $! =~ /Resource temporarily unavailable/;
 
             # timeout, read error or connection closed
             last;
